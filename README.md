@@ -2,6 +2,8 @@
 
 D-Pizza es una aplicación web diseñada para simplificar el proceso de compra de pizzas en línea. Permite a los usuarios seleccionar fácilmente las pizzas que desean, agregarlas a su carrito y completar su pedido de manera conveniente desde la comodidad de su hogar.
 
+![ecommerce](https://github.com/nadirulmi/calculator/assets/106765602/d417ee70-9ba2-47f2-ae78-c01fe0a9de52)
+
 ## Características
 Selección de Pizzas: Los usuarios pueden explorar una variedad de opciones de pizzas y seleccionar las que deseen ordenar.
 Agregado al Carrito: Una vez que los usuarios hayan elegido sus pizzas, pueden agregarlas a su carrito de compras con un simple clic.
