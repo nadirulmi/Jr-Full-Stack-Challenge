@@ -9,16 +9,13 @@ export const CartElement = () => {
   const {
     cart,
     removeFromCart,
-    total,
     handlePlaceOrder,
     handleIngredientToggle,
   } = useContext(dataContext);
 
   const handleRemoveFromCart = (productName) => {
     removeFromCart(productName);
-    console.log(productName);
   };
-  console.log("total:" + total);
 
   return (
     <div className="flex justify-center mt-8">

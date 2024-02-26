@@ -1,8 +1,11 @@
 import { Button } from "../button/Button";
-import cart from "../../assets/shoppingCart.png";
+import cartLogo from "../../assets/shoppingCart.png";
 import { Link } from "react-router-dom";
+import { useContext } from "react";
+import { dataContext } from "../context/DataContext";
 
 export const NavBar = () => {
+  const { cart } = useContext(dataContext);
   return (
     <div className="bg-black">
       <nav className="flex justify-center text-white cursor-pointer">
@@ -22,13 +25,18 @@ export const NavBar = () => {
             <Button path="/orders" text="Orders" />
           </li>
 
-          <Link to="/cart">
+          <Link to="/cart" className="relative inline-block">
             <img
-              src={cart}
-              alt="cart icon"
-              style={{ width: "25px", height: "25px" }}
               className="m-4"
+              src={cartLogo}
+              alt="cart icon"
+              style={{ width: "25px", height: "25px", marginRight: "4px" }}
             />
+            {cart.length > 0 && (
+              <span className="absolute top-0 left-8  bg-yellow-600 rounded px-1 text-white text-xs m-2">
+                {cart.length}
+              </span>
+            )}
           </Link>
         </ul>
       </nav>

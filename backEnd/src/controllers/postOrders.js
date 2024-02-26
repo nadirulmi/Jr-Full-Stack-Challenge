@@ -1,6 +1,5 @@
 let pizzaOrders = [];
 
-
 const postOrders = (req, res) => {
   try {
     const { pizzas, totalPrice, id } = req.body;
@@ -12,8 +11,6 @@ const postOrders = (req, res) => {
       throw new Error("Invalid totalPrice");
     }
 
-    
-
     pizzas.forEach((pizza) => {
       const { name, ingredients, price } = pizza;
       if (!name || !Array.isArray(ingredients) || isNaN(price)) {
@@ -21,7 +18,6 @@ const postOrders = (req, res) => {
       }
 
       pizza.ingredients = ingredients.toString();
-      
     });
 
     const order = {
@@ -30,16 +26,12 @@ const postOrders = (req, res) => {
       totalPrice,
     };
 
-    
-    console.log("Pedido recibido:", order);
-
     pizzaOrders.push(order);
 
     res.status(201).json({
       message: `Order created successfully. Order number: ${id}`,
     });
   } catch (error) {
-    console.error("Error placing order:", error);
     return res.status(400).json({ error: error.message });
   }
 };
