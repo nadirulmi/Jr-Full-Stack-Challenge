@@ -9,8 +9,7 @@ export const NavBar = () => {
   return (
     <div className="bg-black">
       <nav className="flex justify-center text-white cursor-pointer">
-        <img />
-        <ul className="flex ">
+        <ul className="flex justify-center items-center">
           <li className="m-4 hover:text-yellow-600 hover:font-semibold">
             <Button path="/" text="Home" />
           </li>
