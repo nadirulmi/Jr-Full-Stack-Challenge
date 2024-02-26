@@ -17,9 +17,4 @@ Número de Pedido: Al finalizar el proceso de pedido, los usuarios reciben un n�
 - Carpeta backEnd: `npm start`.
 - Carpeta front-end: `npm run dev`.
 
-# Desarrollo en la Rama "developer"
-
-Este proyecto utilizó una rama llamada "developer" para el desarrollo continuo. La rama "main" se considera estable y se utiliza para despliegues de producción. Evito realizar cambios directamente en la rama "main" hasta que todas las funcionalidades estén completamente desarrolladas y probadas en la rama "developer".
-----------
-
 Siéntete libre de contribuir al proyecto. Abre un issue o una pull request para discutir y mejorar!
