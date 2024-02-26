@@ -4,7 +4,6 @@ import Swal from "sweetalert2";
 
 export const dataContext = createContext();
 const DataProvider = ({ children }) => {
-  
   //local storage
   const saveCart = JSON.parse(localStorage.getItem("cart")) || [];
   const saveId = JSON.parse(localStorage.getItem("id") || 100);
@@ -45,7 +44,6 @@ const DataProvider = ({ children }) => {
 
       const orderResponse = await placeOrder(orderData);
 
-      console.log(orderResponse);
       Swal.fire({
         title: "Orden created",
         text: orderResponse.message,
@@ -53,7 +51,6 @@ const DataProvider = ({ children }) => {
       setOrderIdCounter((prevCounter) => prevCounter + 1);
       setCart([]);
       setSelectedIngredients([]);
-      
     } catch (error) {
       throw Error(error.message);
     }

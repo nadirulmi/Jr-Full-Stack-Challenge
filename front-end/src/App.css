@@ -5,14 +5,11 @@
 * {
   font-family: "Oswald", sans-serif;
   font-weight: 500;
-  
 }
 
-body{
+body {
   background-color: #333333;
 }
-
-
 
 #root {
   margin: 0;

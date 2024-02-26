@@ -1,11 +1,11 @@
-import {useContext } from "react";
+import { useContext } from "react";
 import Card from "../../components/card/Card";
 import pizzaImage from "../../assets/pizzaImg.png";
 import { dataContext } from "../../components/context/DataContext";
 
 export const Products = () => {
   const { data } = useContext(dataContext);
-  
+
   return (
     <div>
       <section>

@@ -1,6 +1,9 @@
+import Lottie from "lottie-react";
 import { useContext, useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import { dataContext } from "../../components/context/DataContext";
 import { orderData } from "../../api";
+import animationData from "../../../Animation - 1708631557948.json";
 
 export const Orders = () => {
   const { orderIdCounter } = useContext(dataContext);
@@ -21,8 +24,8 @@ export const Orders = () => {
   }, []);
 
   return (
-    <div className="flex justify-center items-center m-10">
-      {order && (
+    <div className="flex justify-center items-center ">
+      {order ? (
         <div className="bg-white p-6 rounded-lg">
           <h1 className="text-center text-5xl font-semibold text-yellow-700">
             Thanks for your purchase! 🍕
@@ -48,6 +51,21 @@ export const Orders = () => {
             </span>
           </p>
         </div>
+      ) : (
+        <section
+          style={{ backgroundColor: "#F5F4E1" }}
+          className="w-full flex flex-col justify-center items-center m-6 rounded-lg"
+        >
+          <p className="text-red-900 text-5xl mt-8">No orders yet</p>
+          <div className="w-7/12 lg:w-1/5">
+            <Lottie animationData={animationData} />
+          </div>
+          <Link to="/products">
+            <button className="  bg-yellow-600 border-2 border-black mb-8 rounded-lg px-2 py-1 hover:text-white">
+              Place an order
+            </button>
+          </Link>
+        </section>
       )}
     </div>
   );

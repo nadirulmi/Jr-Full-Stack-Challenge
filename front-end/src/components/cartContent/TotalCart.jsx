@@ -3,9 +3,8 @@ import { dataContext } from "../context/DataContext";
 
 export const TotalCart = () => {
   const { cart } = useContext(dataContext);
-  {console.log(cart)}
-  const total = cart.reduce((acc, prod) => acc + prod.price, 0);
 
+  const total = cart.reduce((acc, prod) => acc + prod.price, 0);
 
   return (
     <div>

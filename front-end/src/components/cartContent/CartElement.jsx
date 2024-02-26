@@ -69,14 +69,14 @@ export const CartElement = () => {
       ) : (
         <section
           style={{ backgroundColor: "#F5F4E1" }}
-          className="w-full flex justify-center items-center m-8 rounded-lg"
+          className="w-full flex flex-col justify-center items-center m-8 rounded-lg lg:flex-row"
         >
           <div>
             <p className="text-center text-4xl text-red-900">
               Your cart is empty
             </p>
           </div>
-          <img src={pizzaGif} width="40%" alt="pizza gif" />
+          <img src={pizzaGif} className="w-full lg:w-2/5" alt="pizza gif" />
         </section>
       )}
     </div>

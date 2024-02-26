@@ -18,7 +18,7 @@ export const Home = () => {
         }}
       >
         <h1
-          className="font-bold text-8xl"
+          className="font-bold text-7xl lg:text-8xl"
           style={{ textShadow: "2px 2px 4px rgba(0, 0, 0, 0.9)" }}
         >
           The <span className="text-yellow-600">best</span> pizza in the world
